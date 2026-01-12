@@ -1,4 +1,144 @@
+/* style.css – Barbershop Template */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', 'Segoe UI', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+  background-color: #111;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #000;
+  border-bottom: 3px solid #b38b2e; /* goud/brons */
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #eaeaea;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #b38b2e;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('barber-hero.jpg') center / cover no-repeat;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border: 3px solid #b38b2e;
+  padding: 25px 40px;
+}
+
+/* Layout */
+.container {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 70px;
+}
+
+.section h3 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #b38b2e;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 30px;
+  border: 1px solid #333;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #b38b2e;
+}
+
+.card h4 {
+  margin-bottom: 15px;
+  color: #b38b2e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  border-top: 3px solid #b38b2e;
+  padding: 35px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #b38b2e;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+    padding: 20px;
+  }
 }
