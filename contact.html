@@ -1,92 +1,152 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Urban Barbershop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Dev The Barber</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0e0e0e;
+            color: #eee;
+        }
 
+        /* HERO */
+        .hero {
+            height: 360px;
+            background-image: url("https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #d4af37;
+            letter-spacing: 3px;
+        }
+
+        /* CONTENT */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+        }
+
+        h2 {
+            color: #c9a24d;
+            margin-bottom: 20px;
+        }
+
+        .info p {
+            margin: 12px 0;
+            color: #ddd;
+            font-size: 16px;
+        }
+
+        /* FORM */
+        form input, form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            background-color: #1b1b1b;
+            border: 1px solid #6f5b2e;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        form textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        form button {
+            background: linear-gradient(135deg, #d4af37, #9c6a2e);
+            color: #000;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        form button:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #000;
+            color: #8c7a4a;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">URBAN BARBERSHOP</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="#">Onze diensten</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
-</header>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>CONTACT</h1>
+    </section>
 
-<section class="hero">
-  <h1>Contact</h1>
-</section>
+    <!-- CONTENT -->
+    <div class="container">
+        <div class="grid">
 
-<section class="map-wrapper">
-  <iframe
-    src="https://www.google.com/maps?q=snipperlingsijk,+Deventer&output=embed"
-    loading="lazy">
-  </iframe>
-</section>
+            <div class="info">
+                <h2>Contactgegevens</h2>
+                <p>📍 Deltaplein 8, 7417 BD Deventer</p>
+                <p>📞 06 12345678</p>
+                <p>📧 info@devthebarber.nl</p>
+                <p>
+                    ⏰ Openingstijden<br>
+                    Ma - Vr: 09:00 – 18:00<br>
+                    Za: 10:00 – 17:00<br>
+                    Zo: Gesloten
+                </p>
+            </div>
 
-<section class="content">
+            <div class="form">
+                <h2>Stuur ons een bericht</h2>
+                <form>
+                    <input type="text" placeholder="Naam" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <textarea placeholder="Bericht" required></textarea>
+                    <button type="submit">Verstuur bericht</button>
+                </form>
+            </div>
 
-  <div class="openingstijden">
-    <h2>Openingstijden</h2>
-    <p>Maandag: 12:00 – 18:00</p>
-    <p>Dinsdag: 10:00 – 18:00</p>
-    <p>Woensdag: 10:00 – 18:00</p>
-    <p>Donderdag: 10:00 – 18:00</p>
-    <p>Vrijdag: 10:00 – 21:00</p>
-    <p>Zaterdag: 10:00 – 18:00</p>
-    <p>Zondag: Gesloten</p>
-  </div>
+        </div>
+    </div>
 
-  <div class="contactform">
-    <h2>Contactformulier</h2>
-    <p>U kunt via deze formulier contact met ons nemen.</p>
-
-    <form>
-      <label>Naam *</label>
-      <input type="text" required>
-
-      <label>E-mail *</label>
-      <input type="email" required>
-
-      <label>Bericht</label>
-      <textarea rows="4"></textarea>
-
-      <button type="submit">VERZENDEN</button>
-    </form>
-  </div>
-
-</section>
-
-<footer>
-  <div>
-    <h3>Informatie</h3>
-    <a href="index.html">Home</a>
-    <a href="#">Onze diensten</a>
-    <a href="contact.html">Contact</a>
-    <a href="#">Privacybeleid</a>
-  </div>
-
-  <div>
-    <h3>Openingstijden</h3>
-    <p>Ma–Do: 10:00 – 18:00</p>
-    <p>Vrijdag: 10:00 – 21:00</p>
-    <p>Zaterdag: 10:00 – 18:00</p>
-    <p>Zondag: Gesloten</p>
-  </div>
-
-  <div>
-    <h3>Contact</h3>
-    <p>Urban Barbershop</p>
-    <p>Deltaplein 8, 7417 BD Deventer</p>
-    <p>Email: info@urbanbarbershop.nl</p>
-    <p>KVK: 70228957</p>
-  </div>
-</footer>
+    <footer>
+        © 2026 Dev The Barber
+    </footer>
 
 </body>
 </html>
+    
