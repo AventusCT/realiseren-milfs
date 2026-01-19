@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Classic Cuts Barbershop - Afspraak maken</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>CLASSIC CUTS BARBER SHOP</h1>
+      <div class="subtitle">Professional Barber Services - Amsterdam</div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="#">About Us</a>
+      <a href="#">Products</a>
+      <a href="#">Prices</a>
+      <a href="#" class="active">Appointments</a>
+      <a href="#">People</a>
+    </div>
+  </nav>
+
+  <section class="appointment-section">
+    <div class="container">
+      <div class="booking-box">
+        <h2>Afspraak maken</h2>
+
+        <div class="btn-group">
+          <button class="btn btn-book">Book Appointment</button>
+          <button class="btn btn-view">View Appointments (0)</button>
+        </div>
+
+        <form id="bookingForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullname">Volledige naam</label>
+              <input type="text" id="fullname" value="Dennis Straatman" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" value="dennis.straatman@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Telefoonnummer</label>
+              <input type="tel" id="phone" value="+316" required>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select id="service" required>
+                <option value="">Select a service</option>
+                <option>Classic Haircut</option>
+                <option>Skin Fade</option>
+                <option>Beard Trim</option>
+                <option>Hot Towel Shave</option>
+                <option>Head Shave</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label>Selecteer je kapper</label>
+              <div class="barbers" id="barbers">
+                <div class="barber-option" data-barber="Jan">
+                  Jan de Vries<br><small>Classic Cuts</small>
+                </div>
+                <div class="barber-option" data-barber="Emma">
+                  Emma van den Berg<br><small>Modern Styles</small>
+                </div>
+                <div class="barber-option" data-barber="Pieter">
+                  Pieter Jansen<br><small>Beard Specialist</small>
+                </div>
+                <div class="barber-option" data-barber="Sophie">
+                  Sophie Bakker<br><small>Fades & Tapers</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Datum</label>
+              <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Tijd</label>
+              <select id="time" required>
+                <option value="">Select a time</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:30</option>
+                <option>15:00</option>
+                <option>16:30</option>
+                <option>18:00</option>
+              </select>
+            </div>
+
+            <button type="submit" class="submit-btn">BOEK AFSPRAAK</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
